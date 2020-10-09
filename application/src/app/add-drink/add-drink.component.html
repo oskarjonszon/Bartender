@@ -1,0 +1,63 @@
+<div class="container">
+
+    <form class="form" (ngSubmit)="onSubmit()">
+       
+        <fieldset class="form-intro">
+
+            <legend> CREATE YOUR DRINK </legend>
+
+            <div class="form-field">
+                <label for="title"> TITLE </label>
+                <input type="text" name="title" id="title" [(ngModel)]="name">
+            </div>
+
+            <div class="form-field">
+                <label for="description"> DESCRIPTION </label>
+                <textarea name="description" id="description" [(ngModel)]="description">  </textarea>
+            </div>
+        </fieldset>
+
+        <div class="form-buttons">
+            <input type="button" value="Add Base" (click)="addBase()">
+            <input type="button" value="Add Modifier/Flavouring" (click)="addFlavouring()">
+        </div>
+       
+
+        <div *ngIf="bases.length > 0" class="form-ingredients">
+            <label > Bases </label>
+            <li *ngFor="let base of bases; let i = index">
+                <input type="text" name="{{base.id}}-name" placeholder="Name" [(ngModel)]="base.name"/>
+                <input type="text" name="{{base.id}}-amount" placeholder="Amount" [(ngModel)]="base.amount"/>
+                <div class="list">
+                    <select name="{{base.id}}-measurement" [(ngModel)]="base.measurement">
+                        <option value="" disabled selected> Measurement </option>
+                        <option *ngFor="let measurement of measurements" [ngValue]="measurement">{{measurement}}</option>
+                    </select>
+                </div>
+                <button (click)="removeBase(i)"> - </button>
+            </li>
+        </div>
+
+        <div *ngIf="flavourings.length > 0" class="form-ingredients">
+            <label> Flavourings </label>
+            <li *ngFor="let flavour of flavourings; let i = index">
+                <input type="text" name="{{flavour.id}}-name" placeholder="Name" [(ngModel)]="flavour.name"/>
+                <input type="text" name="{{flavour.id}}-amount" placeholder="Amount" [(ngModel)]="flavour.amount"/>
+                <div class="list">
+                    <select name="{{flavour.id}}-measurement" [(ngModel)]="flavour.measurement">
+                        <option value="" disabled selected> Measurement </option>
+                        <option *ngFor="let measurement of measurements" [ngValue]="measurement">{{measurement}}</option>
+                    </select>
+                </div>
+
+                <button (click)="removeFlavouring(i)"> - </button>
+            </li>
+        </div>
+
+        <div class="form-submit">
+            <input type="submit" value="CREATE">
+        </div>
+        
+    </form> 
+</div>
+

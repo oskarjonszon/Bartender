@@ -1,0 +1,9 @@
+
+#VSCODE
+.vscode
+
+# Ignore Pythons Virtual Enviorment
+server/venv
+
+# Mac
+.DS_STORE

@@ -1,0 +1,51 @@
+<div class="content" role="main">
+
+  <div class="content-wrapper">
+
+    <div class="navbar">
+
+        <nav>
+          <a routerLink="/" routerLinkActive="active">
+              HOME
+            </a>
+            
+            <a routerLink="/browse" routerLinkActive="active"> 
+              BROWSE
+            </a>
+      
+            <a routerLink="/create" routerLinkActive="active"> 
+              CREATE
+            </a>
+
+
+            <a *ngIf="!isLoggedIn()"  routerLink="/login" routerLinkActive="active"> 
+              LOGIN
+            </a>
+
+            <a *ngIf="isLoggedIn()" routerLink="/" (click) = "logout()"> 
+              LOGOUT
+            </a>
+  
+
+          <div *ngIf="isLoggedIn()" class="user"> 
+            <a> {{getUsername()}} </a>
+          </div>
+        </nav>
+
+
+
+    </div>
+
+
+
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+    <div class="footer">
+        <h1> oskarjonszon </h1>
+    </div>
+</div>

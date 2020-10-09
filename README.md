@@ -1,2 +1,6 @@
 # Bartender
-SAP Front-end for Bartender Application
+Bartender
+
+## Application 
+SAP Front-end created with Angular. 
+

@@ -1,0 +1,18 @@
+
+
+<div class="featured">
+
+    <div class="card">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/negroni-1562327392.jpg">
+        <h1> Welcome to Bartender, </h1>
+        <h2> A library for your favorite drink recipes. </h2>
+
+        <div class="nav"> 
+            <a [routerLink]="['/browse']"> Browse </a>
+            <a *ngIf="!isLoggedIn()" [routerLink]="['/login']">  Login </a>
+            <a *ngIf="isLoggedIn()" [routerLink]="['/create']">  Create </a>
+        </div>
+    
+    </div>
+
+</div>

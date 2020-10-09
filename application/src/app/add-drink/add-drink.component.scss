@@ -1,0 +1,146 @@
+.container {
+    background: blueviolet;
+    min-height: 80vh;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.form {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+
+    .form-intro {
+
+        margin-top: 5%;
+
+        legend {
+            color: black;
+            font-size: 20pt;
+            font-weight: 600;
+        }
+
+        width: 85%;
+        
+        .form-field {
+            margin: 5px 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label {
+                margin: 5px 0;
+                font-size: 12pt;
+                font-weight: 600;
+                color: rgb(43, 43, 43);
+            }
+
+            input {
+                padding-left: 8px;
+                border-radius: 2px;
+                width: 50%;
+                height: 35px;
+                border: 1px solid black;
+            }
+            textarea {
+                padding-left: 8px;
+                padding-top: 8px;
+                border-radius: 2px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    .form-buttons {
+        margin: 15px 0;
+        width: 85%;
+        display: flex;
+
+        input {
+            width: 30%;
+            margin-right: 5px;
+            height: 35px;
+            border-radius: 2px;
+            background-color: rgb(149, 0, 255);
+            color: white;
+        }
+    }
+
+    .form-submit {
+        margin-bottom: 5%;
+        margin-top: 15px;
+        width: 85%;
+        display: flex;
+
+        input {
+            width: 30%;
+            height: 35px;
+            border-radius: 2px;
+            background-color: rgb(0, 157, 255);
+            color: white;
+        }
+    }
+
+    .form-ingredients {
+
+        width: 85%;
+        margin: 5px 0;
+
+        li {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+
+            input {
+                width: 20%;
+                height: 25px;
+                margin: 2px;
+                border-radius: 2px;
+                border: 1px solid black;
+                text-align: center;
+                font-size: 10pt;
+            }
+            
+            button {
+                right: 0;
+                height: 27px;
+                width: 27px;
+                margin: 2px;
+                border-radius: 2px;
+                border: 1px solid black;
+                color: black;
+                background-color: rgb(255, 67, 67);
+            }
+
+            .list {
+                
+                width: 15%;
+                height: 25px;
+                margin: 2px;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                select {
+                    height: 100%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;       /* Remove default arrow */
+                    font-size: 10pt;
+                }
+
+             }
+        }
+    }
+}
+
+
