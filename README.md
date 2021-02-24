@@ -13,7 +13,7 @@ TODO:
 * Drink library
 
 ### Back-end
-The back-end is a REST API built using Python with the Flask library. Back-end uses JWT's to ensure authentication of users. 
+The back-end is a REST API built using Python with the Flask library. Back-end uses JWT's to ensure authentication of users and uses SQLite3.
 
 TODO: 
 
